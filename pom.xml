@@ -21,7 +21,7 @@
 		<spring.version>5.3.34</spring.version>
 		<junit.version>4.11</junit.version>
 		<log4j.version>1.2.17</log4j.version>
-		<sonar.host.url>http://3.110.143.246:8639/</sonar.host.url>
+		<sonar.host.url>http://65.0.26.252:8639/</sonar.host.url>
 		<sonar.login>admin</sonar.login>
 		<sonar.password>Santhosh@022</sonar.password> 
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -98,13 +98,13 @@
 	    <repository>
 	      <id>nexus</id>
 	      <name>KK FUNDA Releases Nexus Repository</name>
-	      <url>http://13.233.95.8:8090/repository/iqoo-release-repo/</url>
+	      <url>http://13.126.147.165:8090/repository/iqoo-release-repo/</url>
 	    </repository>
 	    
 	    <snapshotRepository>
 	      <id>nexus</id>
 	      <name>KK FUNDA Snapshot Nexus Repository </name>
-	      <url>http://13.233.95.8:8090/repository/iqoo-snapshot-repo/</url>
+	      <url>http://13.126.147.165:8090/repository/iqoo-snapshot-repo/</url>
 	    </snapshotRepository>
 	    
 	</distributionManagement>
