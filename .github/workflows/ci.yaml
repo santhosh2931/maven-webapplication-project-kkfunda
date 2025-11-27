@@ -11,6 +11,7 @@ jobs:
           distribution: temurin
           java-version: 17
           cache: maven
+      - run: sudo yum install maven -y
       - run: mvn clean package
 
       - name: Deploy into tomcat Server
