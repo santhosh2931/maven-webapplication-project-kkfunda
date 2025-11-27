@@ -3,7 +3,7 @@ on:
   workflow_dispatch:
 jobs:
   full:
-    runs-on: ubuntu-latest
+    runs-on: KKRUNNER
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-java@v4
