@@ -1,6 +1,6 @@
 name: Simple Build and deploy 
 on: 
-  workflow_dispatch:
+  push:
 jobs:
   full:
     runs-on: KKRUNNER
