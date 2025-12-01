@@ -26,6 +26,7 @@ jobs:
         run: mvn clean package
   sonarqube:
      runs-on: self-hosted
+     needs: build
      steps:
       - name: Sonarbue report
         run: mvn sonar:sonar
