@@ -24,12 +24,29 @@ jobs:
 
       - name: Build the artifact
         run: mvn clean package
+
   sonarqube:
      runs-on: self-hosted
      needs: build
      steps:
       - name: Sonarbue report
         run: mvn sonar:sonar
+
+  security-check:
+    runs-on: self-hosted
+    need: sonarqube
+    steps:
+      - name: install the trivy 
+        run: |
+        wget https://github.com/aquasecurity/trivy/releases/download/v0.67.2/trivy_0.67.2_Linux-64bit.deb
+        sudo dpkg -i trivy_0.67.2_Linux-64bit.deb
+      - name: Trivy FS Scan
+        run: trivy fs --format table -o fs-report.json .
+
+
+
+
+
 
 
 
