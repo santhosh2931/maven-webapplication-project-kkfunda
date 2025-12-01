@@ -34,12 +34,15 @@ jobs:
 
   security-check:
     runs-on: self-hosted
-    need: sonarqube
+    needs: sonarqube
     steps:
-      - name: install the trivy 
+      #- uses: actions/checkout@v4
+
+      - name: Install Trivy
         run: |
-        wget https://github.com/aquasecurity/trivy/releases/download/v0.67.2/trivy_0.67.2_Linux-64bit.deb
-        sudo dpkg -i trivy_0.67.2_Linux-64bit.deb
+          wget https://github.com/aquasecurity/trivy/releases/download/v0.67.2/trivy_0.67.2_Linux-64bit.deb
+          sudo dpkg -i trivy_0.67.2_Linux-64bit.deb
+
       - name: Trivy FS Scan
         run: trivy fs --format table -o fs-report.json .
 
