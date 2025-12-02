@@ -76,10 +76,10 @@ jobs:
       #- uses: actions/checkout@v4
 
       - name: Configure kubeconfig
-        run: |
-          aws eks update-kubeconfig \
-            --name ${{ secrets.EKS_CLUSTER_NAME }} \
-            --region ${{ secrets.AWS_REGION }}
+        # run: |
+        #   aws eks update-kubeconfig \
+        #     --name ${{ secrets.EKS_CLUSTER_NAME }} \
+        #     --region ${{ secrets.AWS_REGION }}
 
       - name: Update Deployment Image
         run: |
